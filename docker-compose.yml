@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: diamond-cut-api:local
+    pull_policy: build
+    ports:
+      - "8002:8000"
+    environment:
+      DATABASE_URL: sqlite:////app/data/diamond_logs.db
+    volumes:
+      - diamond_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  diamond_data:

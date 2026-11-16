@@ -1,0 +1,26 @@
+# Git and local configuration
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+
+# Python artifacts and virtual environments
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+.pytest_cache/
+.coverage*
+
+# Training and source datasets are not needed by the API container
+Dataset/
+train.ipynb
+.ipynb_checkpoints/
+
+# IDE and local state
+.idea/
+.vscode/
+*.log
+*.db
